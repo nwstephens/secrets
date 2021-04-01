@@ -1,0 +1,12 @@
+name: faithful
+title: faithful
+username: nathan
+account: nathan
+server: colorado.rstudio.com
+hostUrl: https://colorado.rstudio.com/rsc/__api__
+appId: 8959
+bundleId: 44446
+url: https://colorado.rstudio.com/rsc/content/aabaefd8-3572-4ef9-ae20-ff0f40395b99/
+when: 1617239474.86312
+asMultiple: FALSE
+asStatic: FALSE

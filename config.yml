@@ -1,0 +1,22 @@
+default:
+  faithful:
+    driver: 'postgresql' 
+    server: 'queenie.db.elephantsql.com'
+    port: 5432
+    database: 'edupiata'
+    uid: 'edupiata'
+    pwd: !expr if(Sys.getenv("R_CONFIG_ACTIVE")!="rsconnect") Sys.setenv("pwd" = rstudioapi::askForPassword("Database password:"))
+    boolsAsChar: 0
+    timeout: 10
+    
+rsconnect:
+  faithful:
+    driver: 'postgresql' 
+    server: 'queenie.db.elephantsql.com'
+    port: 5432
+    database: 'edupiata'
+    uid: 'edupiata'
+    pwd: Sys.getenv("pwd")
+    boolsAsChar: 0
+    timeout: 10
+    
