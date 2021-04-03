@@ -28,3 +28,9 @@ keyring_unlock("DBs")
 key_get("db1", "user", keyring = "DBs")
 key_get("db2", "user", keyring = "DBs")
 
+
+### Retrieve with RStudio
+
+options("keyring_backend" = "file")
+keyring::keyring_create("system")
+rstudioapi::askForSecret("psql")
