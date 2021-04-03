@@ -12,9 +12,10 @@ library(DBI)
 library(rstudioapi)
 library(keyring)
 
-#options("keyring_backend" = "file")
-#keyring_create("psql")
-#key_set("edupiata", "edupiata", keyring = "psql")
+# set up the keyring and encrypt the password
+# options("keyring_backend" = "file")
+# keyring_create("psql")
+# key_set("edupiata", "edupiata", keyring = "psql")
 
 if(Sys.getenv("R_CONFIG_ACTIVE")=="rsconnect") {
   pwd <- Sys.getenv("pwd")
