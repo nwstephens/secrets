@@ -1,0 +1,6 @@
+default:
+  pwd: !expr rstudioapi::askForSecret("test")
+  
+rsconnect:
+  pwd: !expr Sys.getenv("test")
+
