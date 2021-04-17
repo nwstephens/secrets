@@ -11,13 +11,12 @@ The file backend for [keyring](https://github.com/r-lib/keyring) is useful for e
 * `keyring_file = ~/.config/r-keyring/system.keyring`
 
 ```
-# Set the file backend
+# Set the file backend (chose one)
 options("keyring_backend" = "file")
-Sys.setenv(R_KEYRING_BACKEND = "file")
+#Sys.setenv(R_KEYRING_BACKEND = "file")
 
 # Create the system keyring
-library(keyring)
-keyring_create("system")
+keyring::keyring_create("system")
 
 # Store and retrieve a secret (interactive).
 rstudioapi::askForSecret("test")
@@ -28,7 +27,8 @@ rstudioapi::askForSecret("test")
 The keyring package contains many functions for operating directly with the keyring such as setting and retrieving secrets without interactive dialogs in the RStudio IDE.
 
 ```
-# Store and retrieve a secret (non-interactive)
+# Store and retrieve a secret
+library(keyring)
 keyring_unlock("system")
 key_set_with_value("RStudio Keyring Secrets", "user", "password", "system")
 key_get("RStudio Keyring Secrets", "user", "system")
