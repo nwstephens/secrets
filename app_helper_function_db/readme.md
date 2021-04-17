@@ -1,3 +1,3 @@
-# Database connection
+# Deploying a Shiny app with a database connection
 
-This app connects to a live database and uses a helper function to detect the RStudio Connect environment.
+This app connects to a live database and uses a helper function to manage the RStudio Connect environment.

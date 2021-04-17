@@ -1,3 +1,3 @@
-# Helper function
+# Deploying a Shiny app with the config package
 
-This app uses a helper function to detect the RStudio Connect environment.
+This app uses the config package to manage the RStudio Connect environment.
